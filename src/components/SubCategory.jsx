@@ -5,7 +5,7 @@ function SubCategory({ category, state, handleClick }) {
   const cardClass = state === SelectState.SELECTED ? 'card-selected' : state === SelectState.UNSELECTED ? 'card-unselected' : 'bg-white';
   return (
   <div 
-    className={`mt-16 mx-4 w-1/6 flex items-center shadow-lg rounded-lg p-2 bg-white
+    className={`mt-4 mx-4 w-1/6 flex items-center shadow-lg rounded-lg p-2 bg-white
       ${cardClass}
     `} 
     onClick={handleClick}

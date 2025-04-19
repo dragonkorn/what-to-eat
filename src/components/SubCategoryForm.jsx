@@ -10,7 +10,7 @@ const SubCategoryForm = ({
 }) => {
   return (
     <div>
-      <div className="flex flex-wrap gap-0 justify-center">
+      <div className="flex flex-wrap gap-0 gap-y-0 justify-center">
         {categories.map((category) => (
           <SubCategory 
             key={category.id} 

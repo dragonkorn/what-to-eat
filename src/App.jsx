@@ -1,23 +1,22 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'
-import TestPage from './pages/TestPage'
-import './App.css'
 import MainPage from './pages/MainPage'
-import Navbar from './components/Navbar'
+import './App.css'
 
 function App() {
   return (
-    <Router>
-      <div className='grow'>
-        <Navbar />
+    <MainPage />
+    // <Router>
+    //   <div className='grow'>
+    //     <Navbar />
 
-        <Routes>
-          <Route index path="/" element={<TestPage />} />
-          <Route path="/test" element={<TestPage />} />
+    //     <Routes>
+    //       <Route index path="/" element={<TestPage />} />
+    //       <Route path="/test" element={<TestPage />} />
 
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
-    </Router>
+    //       <Route path="*" element={<Navigate to="/" replace />} />
+    //     </Routes>
+    //   </div>
+    // </Router>
   )
 }
 
