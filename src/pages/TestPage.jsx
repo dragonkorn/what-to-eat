@@ -52,6 +52,11 @@ function TestPage() {
       }
     }
 
+    if (finalSelectedCategories.length === 0) {
+      alert('No categories selected')
+      return
+    }
+
     console.log(finalSelectedCategories)
     let subCategories = subCategoriesData.filter(subCategory => finalSelectedCategories.includes(subCategory.categoryId))
     setSubCategories(subCategories)
@@ -64,6 +69,43 @@ function TestPage() {
 
   const onClickBack = () => {
     setCurrentPage(1)
+  }
+
+  const onClickNextSubCategory = () => {
+    // find final selected sub categories
+    // if no sub categories are selected, select all sub categories that are neutral
+    
+    // if final selected sub categories more than 2 random to 1
+
+    // alert final selected sub categories
+    let finalSelectedSubCategories = []
+    for (let key in selectedSubCategories) {
+      if (selectedSubCategories[key] === SelectState.SELECTED) {
+        finalSelectedSubCategories.push(key)
+      }
+    }
+    
+    if (finalSelectedSubCategories.length === 0) {
+      for (let key in selectedSubCategories) {
+        if (selectedSubCategories[key] === SelectState.NEUTRAL) {
+          finalSelectedSubCategories.push(key)
+        }
+      }
+    }
+
+    if (finalSelectedSubCategories.length === 0) {
+      alert('No sub categories selected')
+      return
+    }
+
+    if (finalSelectedSubCategories.length > 2) {
+      // random to select the last one
+      finalSelectedSubCategories = finalSelectedSubCategories.sort(() => Math.random() - 0.5).slice(0, 1)
+    }
+
+    // alert final selected sub categories as subCategories
+    let lastSelectedSubCategories = subCategoriesData.filter(subCategory => finalSelectedSubCategories.includes(subCategory.id))
+    alert(lastSelectedSubCategories[0].name)
   }
 
   const onClickSubCategory = (subCategoryId) => {
@@ -100,7 +142,7 @@ function TestPage() {
           onClickCategory={onClickSubCategory}
           onClickReset={onClickResetSubCategory}
           onClickBack={onClickBack}
-          onClickNext={onClickNext}
+          onClickNext={onClickNextSubCategory}
         />
       )}
     </div>
