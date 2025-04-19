@@ -7,11 +7,11 @@ import Navbar from './components/Navbar'
 function App() {
   return (
     <Router>
-      <div>
+      <div className='grow'>
         <Navbar />
 
         <Routes>
-          <Route index path="/" element={<MainPage />} />
+          <Route index path="/" element={<TestPage />} />
           <Route path="/test" element={<TestPage />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
