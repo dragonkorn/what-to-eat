@@ -59,7 +59,7 @@ const subCategoriesData = [
   { id: "57d54fe9-0c5f-4557-aab9-da15edb9ad44", categoryId: "VN", nameEn: "TBD", name: "อาหารเวียดนาม" },
 
   // BR
-  { id: "57d54fe9-0c5f-4557-aab9-da15edb9ad44", categoryId: "BR", nameEn: "TBD", name: "อาหารบราซิล" },
+  { id: "57d54fe9-0c5f-4557-aab9-da15edb9ad45", categoryId: "BR", nameEn: "TBD", name: "อาหารบราซิล" },
 
   // IT
   { id: "e82202d9-4dd6-4ea2-bd8f-03125212342e", categoryId: "IT", nameEn: "TBD", name: "Pizza" },

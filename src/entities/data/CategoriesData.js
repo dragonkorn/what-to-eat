@@ -20,6 +20,11 @@ const categories = [
     name: 'Chinese',
     description: 'Chinese food',
   },
+  {
+    id: "IT",
+    name: 'Italian',
+    description: 'Italian food',
+  },
   // {
   //   id: "WE",
   //   name: 'Western',
